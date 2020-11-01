@@ -1,7 +1,7 @@
 # ======================================
 # [ Scatter Load File ]
 # ======================================
-list(APPEND SCATTER         ${CMAKE_CURRENT_LIST_DIR}/scatter_stm32f303re.sct)
+list(APPEND SCATTER         ${CMAKE_CURRENT_LIST_DIR}/STM32F303RETx_FLASH.sct)
 
 
 # ======================================
