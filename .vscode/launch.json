@@ -1,0 +1,38 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    // Debug ref:   http://www.helton.de/post/solving-libusb-erros-acess-stm32-linux-vs-code/
+    //              https://z49x2vmq.github.io/2017/11/28/semihosting-rdimon/
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (OpenOCD)",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/Bin/RelWithDebInfo/TestApp/TestApp.axf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "svdFile": "${workspaceRoot}/Debug/Device/STMicroelectronics_CMSIS_SVD/STM32F303.svd",
+            "configFiles": [
+                "${workspaceRoot}/Debug/scripts/interface/stlink-v2-1.cfg",
+                "${workspaceRoot}/Debug/scripts/board/st_nucleo_f3.cfg"
+            ],
+            "toolchainPrefix": "arm-none-eabi",
+            "windows": {
+                "armToolchainPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/9 2020-q2-update/bin/"
+            },
+            "linux": {
+                "armToolchainPath": "/usr/local/gcc-arm-none-eabi-9-2020-q2-update/bin/",
+            },
+            "runToMain": false,
+            "postLaunchCommands": [
+                // "monitor arm semihosting on"
+            ],
+            "graphConfig": [
+                
+            ],
+            "preLaunchTask": "build"
+        }
+    ]
+}

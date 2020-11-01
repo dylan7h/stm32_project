@@ -1,20 +1,27 @@
 {
     "configurations": [
         {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/local/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc",
+            "intelliSenseMode": "gcc-arm",
+            "compileCommands": "${workspaceFolder}/Build/compile_commands.json"
+        },
+        {
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
+            "defines": [],
+            "compilerPath": "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "compilerArgs": [
+                "--target=arm-none-eabi"
             ],
-            "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110/bin/Hostx64/x64/cl.exe",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "msvc-x64"
+            "intelliSenseMode": "clang-arm",
+            "compileCommands": "${workspaceFolder}/Build/compile_commands.json"
         }
     ],
     "version": 4

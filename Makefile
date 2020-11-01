@@ -6,7 +6,7 @@ COMPILER_TYPE			:= ARM							# GNU | ARM
 TOOLCHAIN_ROOT			:= "C:/Keil_v5/ARM/ARMCLANG"
 
 TARGET					:= all
-BUILD_TYPE				:= Debug
+BUILD_TYPE				:= Debug						# Release | Debug | RelWithDebInfo
 VERBOSE					:= ON
 EXPORT_COMPILE_COMMANDS	:= ON
 

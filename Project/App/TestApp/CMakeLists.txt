@@ -15,3 +15,7 @@ include(${PROJECT_SOURCE_DIR}/Include/rule.cmake)
 include(${PROJECT_SOURCE_DIR}/Source/rule.cmake)
 
 build_executable()
+
+extract_asm()
+extract_hex()
+extract_bin()
